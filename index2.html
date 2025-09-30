@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Irrigation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background-color: #2e8b57;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Smart Irrigation System</h1>
+    <p>Modern Automated Watering Solution</p>
+</header>
+
+<nav>
+    <button onclick="showSection('profile')">Profile</button>
+    <button onclick="showSection('introduction')">Introduction</button>
+    <button onclick="showSection('abstract')">Abstract</button>
+    <button onclick="showSection('implementation')">Implementation</button>
+    <button onclick="showSection('working')">Working Principle</button>
+    <button onclick="showSection('details')">Project Details</button>
+</nav>
+
+<section id="profile" class="active">
+    <h2>Project Profile</h2>
+    <p><strong>Title:</strong> Smart Irrigation System</p>
+    <p><strong>Developers:</strong>Niyodusenga Kevin & Manishimwe Denyse</p>
+    <p><strong>Institution:</strong>VTLABS GROUP</p>
+    <p><strong>Supervisor:</strong>Dushiminana Alexandre</p>
+    <p><strong>Date:</strong>..../.../2025</p>
+</section>
+
+<section id="introduction">
+    <h2>Project Introduction</h2>
+    <p>
+        The Smart Irrigation System is an innovative solution designed to automate the watering process
+        in agriculture using soil moisture sensors and microcontrollers. It helps in conserving water
+        and improving efficiency.
+        GOAL: monitor soil moisture and automaticall irrigate when dry, while allowing farmer to see live data and control the pump form anywhere via Iot.
+    </p>
+</section>
+
+<section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+        This system automates irrigation by monitoring soil moisture levels and activating water pumps only when needed.
+        It reduces human labor and water wastage while enhancing crop growth and productivity.
+    </p>
+</section>
+
+<section id="implementation">
+    <h2>Implementation</h2>
+    <p>
+        The project uses sensors to measure soil moisture, a microcontroller to process the data, and a relay module to control
+        a water pump. When the soil is dry, the system turns on the pump automatically.
+    </p>
+</section>
+
+<section id="working">
+    <h2>Working Principle</h2>
+    <p>
+        The moisture sensor sends real-time data to the controller. If moisture is below a threshold, the controller powers the pump.
+        Once the required level is reached, the pump is turned off. This closed-loop system ensures efficient water usage.
+    </p>
+</section>
+
+<section id="details">
+    <h2>Implementation Details & Photos</h2>
+    <p>Components used in the system:</p>
+    <ul>
+        <li>Soil Moisture Sensor</li>
+        <li>Microcontroller (e.g.,ESP32)</li>
+        <li>Relay Module</li>
+        <li>Water Pump</li>
+        <li>DHT11</li>
+        <li>LCD</li>
+        <li>Power Source (Battery/Solar)</li>
+    </ul>
+    <img src="c:\Users\pc\Downloads\Smart-Irrigation-System-using-IoT-ddf (1).jpg" alt="Project Setup Photo">
+    <p>Using this system helps us reduce the time we spend doing these things. IoT is very important because it helps us see all the information that is happening in your system.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Smart Irrigation System Project</p>
+</footer>
+
+<script>
+    function showSection(id) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.classList.remove('active'));
+
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
